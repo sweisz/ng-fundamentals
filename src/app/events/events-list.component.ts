@@ -8,7 +8,6 @@ import {ToastrService} from "../common/toastr.service";
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr>
-
       <div class="row">
         <div class="col-md-5" *ngFor="let event of events">
           <event-thumbnail (click)="handleThumbnailClick(event.name)" [event]="event"></event-thumbnail>
@@ -31,5 +30,4 @@ export class EventsListComponent implements OnInit {
   handleThumbnailClick(eventName: any) {
     this.toastr.success(eventName);
   }
-
 }
