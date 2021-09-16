@@ -15,12 +15,12 @@ import {Router} from "@angular/router";
 export class LoginComponent {
   username: any
   password: any
-  mouseoverLogin: any
+  mouseoverLoginBtn: any
 
   constructor(private authService: AuthService, private router: Router) {
   }
 
-  login(formValues: { userName: string; password: string; }) {
+  login({formValues}: { formValues: any }) {
     // console.log(formValues);
     this.authService.loginUser(formValues.userName, formValues.password)
     this.router.navigate(['events'])
