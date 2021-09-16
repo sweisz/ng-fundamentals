@@ -15,7 +15,7 @@ import {
   EventService,
   EventsListComponent,
   EventThumbnailComponent
-} from './events/index'
+} from './events'
 
 @NgModule({
   imports: [
